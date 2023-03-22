@@ -1,5 +1,7 @@
-body{
-    background-color: skyblue;
+body {
+    background-image: url('../images/America.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -84,7 +86,7 @@ footer{
 .homepageWelkom {
   margin-top: 5rem;
   margin-left: 20rem;
-  color: white;
+  color: rgb(32, 2, 150);
   font-size: xx-large;
   text-decoration:underline;
 }

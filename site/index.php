@@ -31,7 +31,7 @@ require 'database.php';
             <p>Wilt u uw recept delen met de wereld? dat kan ook! Maak nu een account aan om uw eigen recept te maken!</p>
         </div>
         <div class="homepageWelkom">
-            <h1>Wij wensen u veel kookplezier!!!</h1>
+            <h1><b><i>Wij wensen u veel kookplezier!!!</i></b></h1>
         </div>
     </div>
     <?php include 'footer.php'; ?>
