@@ -1,9 +1,68 @@
+body{
+    background-color: skyblue;
+}
+
 header {
    background-color: red;
    color: white;
    text-align: center;
+   font-size: small;
+   position: fixed;
+   width: 100%;
+   left: 0;
+   top: 0;
 }
 .recepten{
     display: flex;
 
 }
+nav {
+    background-color: blue;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -1.33rem;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 5.4rem;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0;
+  }
+  
+  nav a {
+    display: block;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .inloggen{
+    float: right;
+  }
+footer{
+    background-color: white;
+    color: red;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: x-small;
+    width: 100%;
+
+}
+  

@@ -2,7 +2,7 @@
 require 'database.php';
 // Dit is het startpunt van je applicatie.
 
-$hamburger = "images/Hamburger.png";
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +15,10 @@ $hamburger = "images/Hamburger.png";
     <title>Document</title>
 </head>
 <body>
-    <img src="<?php echo $hamburger ?>" alt="">
+    <?php include 'header.php'; ?>
+    <?php include 'nav.php'; ?>
+
+    
+    <?php include 'footer.php'; ?>
 </body>
 </html>
