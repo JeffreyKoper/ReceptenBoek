@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/style.css">
-<nav class="flex-container">
+<nav>
   <ul>
     <li><a href="index.php">Home</a></li>
     <li><a href="#">Recepten</a></li>
