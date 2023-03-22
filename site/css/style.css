@@ -1,13 +1,13 @@
 body {
     background-image: url('../images/America.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-   background-color: red;
+   background-color: rgb(203, 3, 3);
    color: white;
-   text-align: center;
    font-size: small;
    position: fixed;
    width: 100%;
@@ -19,12 +19,12 @@ header {
 
 }
 nav {
-    background-color: blue;
+    background-color: rgb(32, 2, 150);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -1.33rem;
+    margin-top: -1.5rem;
     position: fixed;
     width: 100%;
     left: 0;
@@ -53,7 +53,7 @@ nav {
   nav a:hover {
     text-decoration: underline;
   }
-  .inloggen{
+  .floatRechts{
     float: right;
   }
 footer{
@@ -71,7 +71,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
-    margin-top: 140px;
+    margin-top: 150px;
     
   }
   
