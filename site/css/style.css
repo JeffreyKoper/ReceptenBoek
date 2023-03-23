@@ -13,11 +13,39 @@ header {
    width: 100%;
    left: 0;
    top: 0;
+   z-index: 200;
 }
-.recepten{
+.recepten-container{
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin-top: 150px;
 }
+.recepten-items {
+  flex-basis: calc(15% - 20px); 
+  margin-bottom: 2px; 
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: white;
+}
+.detail-buttons {
+  background-color: #ffffff;
+  border: 5px solid #3c3b6e;
+  border-radius: 7px;
+  color: #ce0707;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+.detail-buttons:hover{
+  cursor:pointer;
+}
+
 nav {
     background-color: rgb(32, 2, 150);
     width: 100%;
@@ -29,6 +57,7 @@ nav {
     width: 100%;
     left: 0;
     top: 5.4rem;
+    z-index: 200;
   }
   
   nav ul {
@@ -72,7 +101,6 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between; 
     margin-top: 150px;
-    
   }
   
   .flex-item {
@@ -83,11 +111,16 @@ footer{
     box-sizing: border-box;
     background-color: white;
   }
+  
 .homepageWelkom {
   margin-top: 5rem;
   margin-left: 20rem;
   color: rgb(32, 2, 150);
   font-size: xx-large;
   text-decoration:underline;
+}
+.receptAfbeelding {
+  width: 4rem;
+  height: 4rem;
 }
   

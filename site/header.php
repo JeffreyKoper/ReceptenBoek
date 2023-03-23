@@ -8,8 +8,6 @@
     // set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $aantalRecepten = $stmt->fetch();
-
-    var_dump($aantalRecepten)
   
 ?>
 
