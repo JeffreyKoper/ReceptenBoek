@@ -11,6 +11,21 @@ $stmt->execute();
 
 $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $recept = $stmt->fetchAll();
+
+
+$sql = "SELECT * FROM `Recept_Ingredienten`
+JOIN Ingredienten ON Ingredienten.id = `ingredienten.id` WHERE `recept.id` =  :id"
+;
+$stmt = $conn->prepare($sql);
+$stmt->bindParam(':id', $id);
+
+$stmt->execute();
+
+$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+$ingredienten = $stmt->fetchAll();
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,10 +43,19 @@ $recept = $stmt->fetchAll();
     <?php include 'nav.php'; ?>
     <div class="recepten-container">
             <div class="details">        
-                <?php foreach ($recept as $receptDetails) : ?>   
+                <?php foreach ($recept as $receptDetails ) : ?>   
                     <h1 class="center"><?php echo $receptDetails["gerecht_naam"] ?></h1>
                     <img height="400px" width="650px" src="<?php echo $receptDetails['afbeelding'] ?>" alt="een foto van <?php echo $receptDetails['gerecht_naam'] ?>">
+                <?php endforeach; ?>
+                <h2>Benodigheden:</h2>
+                <?php foreach ($ingredienten as $ingredient ) : ?>  
+                    <p><?php echo $ingredient['hoeveelheid'] ?> <?php echo $ingredient['naam'] ?></p>
+                <?php endforeach; ?>
+                <h2>Recept:</h2>
+                <?php foreach ($recept as $receptDetails ) : ?>   
                     <p><?php echo $receptDetails['beschrijving'] ?></p>
+                    <h2>Tijdsduur:</h2>
+                    <p><?php echo $receptDetails['tijdsduur'] ?>
                 <?php endforeach; ?>
             </div>
     </div>
