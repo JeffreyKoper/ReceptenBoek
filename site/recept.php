@@ -47,15 +47,20 @@ $ingredienten = $stmt->fetchAll();
                     <h1 class="center"><?php echo $receptDetails["gerecht_naam"] ?></h1>
                     <img height="400px" width="650px" src="<?php echo $receptDetails['afbeelding'] ?>" alt="een foto van <?php echo $receptDetails['gerecht_naam'] ?>">
                 <?php endforeach; ?>
-                <h2>Benodigheden:</h2>
+                <h2>Benodigheden/ingredienten:</h2>
                 <?php foreach ($ingredienten as $ingredient ) : ?>  
-                    <p><?php echo $ingredient['hoeveelheid'] ?> <?php echo $ingredient['naam'] ?></p>
+                    <p><?php echo $ingredient['hoeveelheid'] ?> <?php echo $ingredient['naam'] ?> <?php if($ingredient['verplicht'] == 1) : ?> * <?php endif;?></p>
                 <?php endforeach; ?>
+                <p>* = Verplicht, zonder = optioneel</p>
                 <h2>Recept:</h2>
                 <?php foreach ($recept as $receptDetails ) : ?>   
                     <p><?php echo $receptDetails['beschrijving'] ?></p>
                     <h2>Tijdsduur:</h2>
                     <p><?php echo $receptDetails['tijdsduur'] ?>
+                    <h2>Menugang:</h2>
+                    <p><?php echo $receptDetails['menugang'] ?>
+                    <h2>moeilijkheidsniveau:</h2>
+                    <p><?php echo $receptDetails['moeilijksheidgraad'] ?>
                 <?php endforeach; ?>
             </div>
     </div>
