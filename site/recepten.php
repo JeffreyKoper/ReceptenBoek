@@ -1,5 +1,6 @@
 <?php
 require 'database.php';
+SESSION_START();
 
 $stmt = $conn->prepare("SELECT id,gerecht_naam, afbeelding FROM `Recepten`;");
 $stmt->execute();
@@ -26,9 +27,8 @@ $stmt->execute();
             <div class="recepten-items">
                 <h1><?php echo $recept['gerecht_naam']?> </h1>
                 <img height="200px" width="200px" src="<?php echo $recept['afbeelding'] ?>" alt="een foto van <?php echo $recept['gerecht_naam'] ?>">
-                <button type="submit" class="detail-buttons">Klik hier voor meer details!</button>
+                <button type="submit" class="detail-buttons"><a href="recept.php?id=<?php echo $recept["id"] ?>">Klik hier voor meer details!</a></button>
             </div>
         <?php endforeach; ?>
-    </div>
-
+        </div>
     <?php include 'footer.php'; ?>

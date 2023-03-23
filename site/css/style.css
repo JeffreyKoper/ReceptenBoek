@@ -1,6 +1,6 @@
 body {
     background-image: url('../images/America.png');
-    background-repeat: no-repeat;
+    background-repeat:repeat-y;
     background-size: 100rem;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -28,6 +28,20 @@ header {
   border: 1px solid black;
   box-sizing: border-box;
   background-color: white;
+}
+.details{
+  flex-basis: calc(45% - 20px); 
+  margin-bottom: 2px; 
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: white;
+  margin-left: 28rem;
+  margin-top: -0.5rem;
+  background-color: #ce0707;
+  color: white;
+  border-color: #3c3b6e;
+  border-radius: 2rem;
 }
 .detail-buttons {
   background-color: #ffffff;
@@ -94,6 +108,7 @@ footer{
     left: 0;
     font-size: x-small;
     width: 100%;
+    z-index: -1;
 
 }
 .flex-container {
@@ -123,4 +138,6 @@ footer{
   width: 4rem;
   height: 4rem;
 }
-  
+.center{
+  text-align: center;
+}
