@@ -43,6 +43,21 @@ header {
   border-color: #3c3b6e;
   border-radius: 2rem;
 }
+.ingredienten {
+  flex-basis: calc(20% - 20px); 
+  margin-bottom: 2px; 
+  padding: 10px;
+  border: 10px solid #3c3b6e;
+  box-sizing: border-box;
+  color: #ce0707;
+  background-color: #ffffff;
+}
+.ingredienten-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 150px;
+}
 .detail-buttons {
   background-color: #ffffff;
   border: 5px solid #3c3b6e;
