@@ -1,6 +1,8 @@
 <?php 
 require 'database.php';
 
+SESSION_START();
+
 $id = $_GET['id'];  
 
 $sql = "SELECT * FROM `Recepten` WHERE id = :id";
@@ -41,7 +43,7 @@ $ingredienten = $stmt->fetchAll();
 <body>
     <?php include 'header.php'; ?>
     <?php include 'nav.php'; ?>
-    <div class="recepten-container">
+    <div class="recept-container">
             <div class="details">        
                 <?php foreach ($recept as $receptDetails ) : ?>   
                     <h1 class="center"><?php echo $receptDetails["gerecht_naam"] ?></h1>

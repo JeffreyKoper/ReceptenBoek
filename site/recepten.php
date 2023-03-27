@@ -1,6 +1,8 @@
 <?php
 require 'database.php';
 
+SESSION_START();
+
 $stmt = $conn->prepare("SELECT id,gerecht_naam, afbeelding FROM `Recepten`;");
 $stmt->execute();
   

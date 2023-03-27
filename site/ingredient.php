@@ -1,10 +1,10 @@
 <?php 
 require 'database.php';
-
+SESSION_START();
 $id = $_GET['id'];  
 
 if(isset($_POST["submitButton"])){
-    if(!empty($_POST["naamIngredient"])){ 
+    if(!empty($_POST["naamIngredient"])) { 
         $naam = $_POST["naamIngredient"];
         // prepare sql and bind parameters
         $stmt = $conn->prepare("UPDATE `Ingredienten` SET `naam` = :name WHERE `Ingredienten`.`id` = :id");
@@ -14,8 +14,6 @@ if(isset($_POST["submitButton"])){
         
         header('Location: ingredienten.php');
         exit();
-
-        
     } 
 }
 

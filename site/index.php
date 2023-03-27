@@ -2,6 +2,7 @@
 require 'database.php';
 // Dit is het startpunt van je applicatie.
 
+SESSION_START();
 
 ?>
 
