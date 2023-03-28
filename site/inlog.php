@@ -57,7 +57,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
                     <label for="Password">Password</label>
                     <input type="password" class="form-control" id="Password" placeholder="Password" name= "password">
                     <button type="submit" id="Submit"class="submit-button">Inloggen</button>
-                    <h1>Nog geen account? <a href="registreren.php">Klik hier</a> om een account te maken!</h1>
+                    <h1>Nog geen account? <a href="registreer.php">Klik hier</a> om een account te maken!</h1>
                 </div>
             </form>
             </div>

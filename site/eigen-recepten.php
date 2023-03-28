@@ -25,9 +25,8 @@ $stmt->execute();
     <?php include 'nav.php'; ?>
     <div class="recepten-container">
         <?php if(empty($recepten)) : ?>
-        <div class="">
-            <h1 class="">U heeft nog geen recepten gemaakt</h1>
-        </div>
+            <h1>U heeft nog geen recepten gemaakt</h1>
+            <a href=""><button type="submit">Aanmaken</button></a>
         <?php endif; ?>
         <?php if(!empty($recepten)) : ?>
             <?php foreach ($recepten as $mijn_recepten) : ?>
