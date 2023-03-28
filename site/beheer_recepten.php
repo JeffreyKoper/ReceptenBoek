@@ -8,11 +8,18 @@ if($_SESSION['rol'] != "Developer" && $_SESSION['rol'] != "Projectleider" &&  $_
 }
 $stmt = $conn->prepare("SELECT * FROM `Recepten`;");
 $stmt->execute();
-  
+
     // set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $recepten = $stmt->fetchAll();
 
+    if(isset($_POST["deleteButton"])){
+        $id = $_POST['receptID'];
+        // prepare sql and bind parameters
+        $stmt = $conn->prepare("DELETE FROM Recepten WHERE id = :id");
+        $stmt->bindParam(':id', $id);    
+        $stmt->execute();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +40,11 @@ $stmt->execute();
                 <h1><?php echo $recept['gerecht_naam']?> </h1>
                 <img height="200px" width="200px" src="<?php echo $recept['afbeelding'] ?>" alt="een foto van <?php echo $recept['gerecht_naam'] ?>">
                 <a href="update_recept.php?id=<?php echo $recept["id"] ?>"><button type="submit" class="">Weizigen</button></a>
-                <a href="recept.php?id=<?php echo $recept["id"] ?>"><button type="submit" class="">Verwijderen</button></a>
+                <form action="" method="post">
+                <input type="hidden" name="receptID" value="<?php echo $recept['id'] ?>">
+                    <button type="submit" name="deleteButton" class="">Verwijderen</button></a>
+                </form>
             </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
         </div>
     <?php include 'footer.php'; ?>
