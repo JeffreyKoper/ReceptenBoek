@@ -63,6 +63,10 @@ $ingredienten = $stmt->fetchAll();
                     <p><?php echo $receptDetails['menugang'] ?>
                     <h2>moeilijkheidsniveau:</h2>
                     <p><?php echo $receptDetails['moeilijksheidgraad'] ?>
+                    <?php if($_SESSION['id'] == $receptDetails['gebruiker_id']) : ?>
+                        <h2>Updaten</h2>
+                        <a href="update_recept.php?id=<?php echo $receptDetails["id"] ?>">Update Recept</a></td>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </div>
     </div>
