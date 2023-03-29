@@ -27,7 +27,7 @@ $stmt->execute();
         <?php foreach ($recepten as $recept) : ?>
             <div class="recepten-items">
                 <h1><?php echo $recept['gerecht_naam']?> </h1>
-                <img height="200px" width="200px" src="<?php echo $recept['afbeelding'] ?>" alt="een foto van <?php echo $recept['gerecht_naam'] ?>">
+                <img height="200px" width="200px" src="images/<?php echo $recept['afbeelding'] ?>" alt="een foto van <?php echo $recept['gerecht_naam'] ?>">
                 <a href="recept.php?id=<?php echo $recept["id"] ?>"><button type="submit" class="detail-buttons">Klik hier voor meer details!</button></a>
             </div>
         <?php endforeach; ?>
