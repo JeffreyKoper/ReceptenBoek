@@ -1,7 +1,7 @@
 <?php
 require 'database.php';
 
-SESSION_START();
+session_start();
 $id = $_SESSION['id'];
 $stmt = $conn->prepare("SELECT id,gerecht_naam, afbeelding FROM `Recepten` WHERE gebruiker_id = '$id'");
 $stmt->execute();

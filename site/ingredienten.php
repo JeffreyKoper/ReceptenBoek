@@ -1,5 +1,5 @@
 <?php require 'database.php';
-SESSION_START();
+session_start();
 $stmt = $conn->prepare("SELECT * FROM `Ingredienten`");
 $stmt->execute();
   

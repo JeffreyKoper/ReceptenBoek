@@ -1,7 +1,7 @@
 <?php
 require 'database.php';
 
-SESSION_START();
+session_start();
 if($_SESSION['rol'] != "Developer" && $_SESSION['rol'] != "Projectleider" &&  $_SESSION['rol'] != "Begeleider"){
     header("Location: http://localhost/index.php");
     exit;

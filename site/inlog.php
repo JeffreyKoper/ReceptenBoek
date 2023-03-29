@@ -1,7 +1,7 @@
 <?php
 require 'database.php';
 
-SESSION_START();
+session_start();
 
 if(isset($_POST['email']) && !empty($_POST['email'])){
     $email = $_POST['email'];

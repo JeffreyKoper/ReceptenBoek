@@ -38,7 +38,7 @@ if(isset($_POST['firstname'],$_POST['lastname'], $_POST[    'email'], $_POST['pa
         <div class="inlog-items">
             <form method="post">
                 <div class="text-white">
-                    <h2>Registeren</h2>
+                    <h2>Gebruiker Aanmaken</h2>
                     <label for="firstname">Voornaam</label>
                     <input type="text" class="form-control" id="firstname" placeholder="Voornaam" name="firstname"> <br><br>
                     <label for="lastname">Achternaam</label>

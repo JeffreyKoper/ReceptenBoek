@@ -1,5 +1,5 @@
 <?php 
-SESSION_START();
+session_start();
 require 'database.php';
     if(isset($_POST["submitButton"])){
         $recept_id = $_POST['recept_id'];

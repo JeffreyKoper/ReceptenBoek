@@ -1,7 +1,7 @@
 <?php 
 require 'database.php';
 
-SESSION_START();
+session_start();
 
 $id = $_GET['id'];  
 

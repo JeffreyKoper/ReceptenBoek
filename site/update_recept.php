@@ -1,5 +1,5 @@
 <?php 
-SESSION_START();
+session_start();
 require 'database.php';
     $id = $_GET['id'];
     if(isset($_POST["submitButton"])){
