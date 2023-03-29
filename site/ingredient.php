@@ -39,7 +39,7 @@ $ingredienten = $stmt->fetchAll();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <?php include 'nav.php'; ?>
+    
     <div class="recepten-container">
         <div class="verandernaam"> 
             <form action="" method="post">

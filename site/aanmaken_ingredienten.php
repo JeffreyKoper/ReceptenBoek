@@ -51,7 +51,7 @@ $recepten = $stmt->fetchAll();
 </head>
 <body>
 <?php include 'header.php'; ?>
-<?php include 'nav.php'; ?>
+
     <form action="" method="post">
             <label for="" class="text-white">Ingredienten toevoegen</label>
             <select id="recept" name="recept_id">

@@ -45,7 +45,7 @@ require 'database.php';
 </head>
 <body>
 <?php include 'header.php'; ?>
-<?php include 'nav.php'; ?>
+
     <form action="" method="post">
         <?php foreach($recept as $eigen_recept) : ?>
             <label for="" class="text-white">Update Recept</label>

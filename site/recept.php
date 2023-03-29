@@ -42,12 +42,11 @@ $ingredienten = $stmt->fetchAll();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <?php include 'nav.php'; ?>
     <div class="recept-container">
             <div class="details">        
                 <?php foreach ($recept as $receptDetails ) : ?>   
                     <h1 class="center"><?php echo $receptDetails["gerecht_naam"] ?></h1>
-                    <img height="400px" width="650px" src="Images/<?php echo $receptDetails['afbeelding'] ?>" alt="een foto van <?php echo $receptDetails['gerecht_naam'] ?>">
+                    <img height="400px" width="100%" src="Images/<?php echo $receptDetails['afbeelding'] ?>" alt="een foto van <?php echo $receptDetails['gerecht_naam'] ?>">
                 <?php endforeach; ?>
                 <h2>Benodigheden/ingredienten:</h2>
                 <?php foreach ($ingredienten as $ingredient ) : ?>  
@@ -58,7 +57,7 @@ $ingredienten = $stmt->fetchAll();
                 <?php foreach ($recept as $receptDetails ) : ?>   
                     <p><?php echo $receptDetails['beschrijving'] ?></p>
                     <h2>Tijdsduur:</h2>
-                    <p><?php echo $receptDetails['tijdsduur'] ?>
+                    <p><?php echo $receptDetails['tijdsduur'] ?> Minuten</p>
                     <h2>Menugang:</h2>
                     <p><?php echo $receptDetails['menugang'] ?>
                     <h2>moeilijkheidsniveau:</h2>

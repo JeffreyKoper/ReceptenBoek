@@ -32,7 +32,7 @@ $stmt->execute();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <?php include 'nav.php'; ?>
+    
     <div class="recepten-container">
         <h2 class="submit-button"><a href="aanmaken_recept.php"><button type="submit" class="">Aanmaken</button></a></h2>
         <?php foreach ($recepten as $recept) : ?>

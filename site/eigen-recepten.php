@@ -22,7 +22,7 @@ $stmt->execute();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <?php include 'nav.php'; ?>
+    
     <div class="recepten-container">
         <?php if(empty($recepten)) : ?>
             <h1>U heeft nog geen recepten gemaakt</h1>

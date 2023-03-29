@@ -22,7 +22,7 @@ $stmt->execute();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <?php include 'nav.php'; ?>
+    
     <div class="recepten-container">
         <?php foreach ($recepten as $recept) : ?>
             <div class="recepten-items">

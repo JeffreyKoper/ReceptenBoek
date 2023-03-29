@@ -46,7 +46,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <?php include 'nav.php'; ?>
+    
     <div class="inlog-container">
         <div class="inlog-items">
             <form method="post">

@@ -19,7 +19,7 @@ $stmt->execute();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <?php include 'nav.php'; ?>
+    
     <<div class="ingredienten-container">
         <?php foreach ($ingredienten as $ingredient) : ?>
             <div class="ingredienten">
