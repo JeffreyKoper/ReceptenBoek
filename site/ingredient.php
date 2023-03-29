@@ -41,7 +41,7 @@ $ingredienten = $stmt->fetchAll();
     <?php include 'header.php'; ?>
     <?php include 'nav.php'; ?>
     <div class="recepten-container">
-        <div class="details"> 
+        <div class="verandernaam"> 
             <form action="" method="post">
                 <?php foreach ($ingredienten as $ingredient ) : ?> 
                 <label for="">Naam ingredient</label>

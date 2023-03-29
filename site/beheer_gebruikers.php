@@ -43,7 +43,7 @@ $stmt->execute();
                 <p>Wachtwoord: <?php echo $gebruiker['password']?> </p>
                 <p>Rol: <?php echo $gebruiker['rol']?> </p>
                 <p>Geslacht: <?php echo $gebruiker['geslacht']?> </p>
-                <a href="update_gebruiker.php?id=<?php echo $gebruiker['id'] ?>"><button type="submit" class="">Weizigen</button></a><br>
+                <a href="update_gebruiker.php?id=<?php echo $gebruiker['id'] ?>"><button type="submit" class="">Wijzigen</button></a><br>
                 <form action="" method="post">
                     <input type="hidden" name="gebruikerID" value="<?php echo $gebruiker['id'] ?>">
                     <button type="submit" name="deleteButton" class="">Verwijderen</button>

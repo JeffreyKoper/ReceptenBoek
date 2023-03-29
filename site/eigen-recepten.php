@@ -32,7 +32,7 @@ $stmt->execute();
             <?php foreach ($recepten as $mijn_recepten) : ?>
                 <div class="recepten-items">
                     <h1><?php echo $mijn_recepten['gerecht_naam']?> </h1>
-                    <img height="200px" width="200px" src="<?php echo $mijn_recepten['afbeelding'] ?>" alt="een foto van <?php echo $mijn_recepten['gerecht_naam'] ?>">
+                    <img height="200px" width="200px" src="Images/<?php echo $mijn_recepten['afbeelding'] ?>" alt="een foto van <?php echo $mijn_recepten['gerecht_naam'] ?>">
                     <a href="recept.php?id=<?php echo $mijn_recepten["id"] ?>"><button type="submit" class="detail-buttons">Klik hier voor meer details!</button></a>
                 </div>
         <?php endforeach; ?>

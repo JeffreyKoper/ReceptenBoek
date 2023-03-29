@@ -38,7 +38,7 @@ $stmt->execute();
         <?php foreach ($recepten as $recept) : ?>
             <div class="recepten-items">
                 <h1><?php echo $recept['gerecht_naam']?> </h1>
-                <img height="200px" width="200px" src="<?php echo $recept['afbeelding'] ?>" alt="een foto van <?php echo $recept['gerecht_naam'] ?>">
+                <img height="200px" width="200px" src="Images/<?php echo $recept['afbeelding'] ?>" alt="een foto van <?php echo $recept['gerecht_naam'] ?>">
                 <a href="update_recept.php?id=<?php echo $recept["id"] ?>"><button type="submit" class="">Wijzigen</button></a>
                 <form action="" method="post">
                 <input type="hidden" name="receptID" value="<?php echo $recept['id'] ?>">

@@ -47,7 +47,7 @@ $ingredienten = $stmt->fetchAll();
             <div class="details">        
                 <?php foreach ($recept as $receptDetails ) : ?>   
                     <h1 class="center"><?php echo $receptDetails["gerecht_naam"] ?></h1>
-                    <img height="400px" width="650px" src="<?php echo $receptDetails['afbeelding'] ?>" alt="een foto van <?php echo $receptDetails['gerecht_naam'] ?>">
+                    <img height="400px" width="650px" src="Images/<?php echo $receptDetails['afbeelding'] ?>" alt="een foto van <?php echo $receptDetails['gerecht_naam'] ?>">
                 <?php endforeach; ?>
                 <h2>Benodigheden/ingredienten:</h2>
                 <?php foreach ($ingredienten as $ingredient ) : ?>  
@@ -63,9 +63,11 @@ $ingredienten = $stmt->fetchAll();
                     <p><?php echo $receptDetails['menugang'] ?>
                     <h2>moeilijkheidsniveau:</h2>
                     <p><?php echo $receptDetails['moeilijksheidgraad'] ?>
-                    <?php if($_SESSION['id'] == $receptDetails['gebruiker_id']) : ?>
-                        <h2>Updaten</h2>
-                        <a href="update_recept.php?id=<?php echo $receptDetails["id"] ?>">Update Recept</a></td>
+                    <?php if(!empty($_SESSION)) : ?>
+                        <?php if($_SESSION['id'] == $receptDetails['gebruiker_id']) : ?>
+                            <h2>Updaten</h2>
+                            <a href="update_recept.php?id=<?php echo $receptDetails["id"] ?>">Update Recept</a></td>
+                        <?php endif; ?>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
