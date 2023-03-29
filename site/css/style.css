@@ -35,6 +35,20 @@ header {
   box-sizing: border-box;
   background-color: white;
 }
+.gebruikers_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  margin-top: 10rem;
+}
+.gebruikers_items {
+flex-basis: calc(20% - 20px); 
+margin-bottom: 2px; 
+padding: 10px;
+border: 1px solid black;
+box-sizing: border-box;
+background-color: white;
+}
 
 .details{
   flex-basis: calc(45% - 20px); 

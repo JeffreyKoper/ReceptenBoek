@@ -4,20 +4,22 @@ require 'database.php';
 session_start();
 
 if(isset($_POST['firstname'],$_POST['lastname'], $_POST[    'email'], $_POST['password'], $_POST['geslacht'])){
-    $stmt = $conn->prepare("INSERT INTO Gebruiker (first_name, last_name, email, password, geslacht)
-    VALUES (:firstname, :lastname, :email, :password, :geslacht)");
+    $stmt = $conn->prepare("INSERT INTO Gebruiker (first_name, last_name, email, password, rol, geslacht)
+    VALUES (:firstname, :lastname, :email, :password, :rol, :geslacht)");
     $stmt->bindParam(':firstname', $firstname);
     $stmt->bindParam(':lastname', $lastname);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':password', $password);
+    $stmt->bindParam(':rol', $rol);
     $stmt->bindParam(':geslacht', $geslacht);
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
+    $rol = $_POST['rol'];
     $password = $_POST['password'];
     $geslacht = $_POST['geslacht'];
     $stmt->execute();
-    header("Location: inlog.php");
+    header("Location: beheer_gebruikers.php");
 }
 
 ?>
@@ -53,8 +55,9 @@ if(isset($_POST['firstname'],$_POST['lastname'], $_POST[    'email'], $_POST['pa
                         <option value="vrouw">Vrouw</option>
                         <option value="overige">overige</option>
                     </select><br><br>
+                    <label for="Rol">Rol</label>
+                    <input type="text" class="form-control" id="rol" value="Gebruiker" placeholder="Rol in onze website" name= "rol"><br> <br>
                     <button type="submit" id="Submit"class="submit-button">Registeren</button>
-                    <h1>Al een account gemaakt? <a href="inlog.php">Klik hier</a> om in te loggen!</h1>
                 </div>
             </form>
             </div>

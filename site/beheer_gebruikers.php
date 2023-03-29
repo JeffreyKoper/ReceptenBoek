@@ -33,10 +33,10 @@ $stmt->execute();
 <body>
     <?php include 'header.php'; ?>
     <?php include 'nav.php'; ?>
-    <div class="recepten-container">
+    <div class="gebruikers_container">
         <h2 class="submit-button"><a href="aanmaken_gebruiker.php"><button type="submit" class="">Gebruiker Aanmaken</button></a></h2>
         <?php foreach ($gebruikers as $gebruiker) : ?>
-            <div class="recepten-items">
+            <div class="gebruikers_items">
                 <p>Voornaam: <?php echo $gebruiker['first_name']?> </p>
                 <p>Achternaam: <?php echo $gebruiker['last_name']?> </p>
                 <p>Email: <?php echo $gebruiker['email']?> </p>
