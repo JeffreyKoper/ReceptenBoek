@@ -22,7 +22,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
             $password = $_POST['password'];
             if($gebruiker["password"] == $password){
                 $_SESSION = $gebruiker;
-                header("Location: http://localhost/index.php");
+                header("Location: index.php");
             }
             else {
                 echo "Het email Adres of het wachtwoord is incorrect, probeer het opnieuw.";

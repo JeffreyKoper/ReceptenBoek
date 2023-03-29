@@ -19,7 +19,7 @@ require 'database.php';
                 $stmt->bindParam(':menugang', $menugang);
                 $stmt->bindParam(':id', $id);
                 $stmt->execute();          
-                header("Location: http://localhost/eigen-recepten.php");
+                header("Location: eigen-recepten.php");
                 
            } 
         } 
