@@ -14,15 +14,16 @@
 
 <header>
   <h1>Amerikaans Receptenboek <div class="floatRechts">  Totaal Aantal Recepten: <?php echo $aantalRecepten['totaalRecepten'] ?></div> </h1>
-
   <nav>
   <ul>
     <li><a href="index.php">Home</a></li>
     <li><a href="recepten.php">Recepten</a></li>
     <li><a href="ingredienten.php">Ingredienten</a></li>
+    <li><a href="specials.php">Specials</a></li>
     <?php if(empty($_SESSION)) : ?>
       <li><a href="inlog.php">Inloggen/Registreren</a></li>
     <?php endif; ?>
+    <!-- If statement kijkt of gebruiker een Developer, Projectleider, of Begelijder is. dan komen er meer opties op de navbar-->
     <?php if(!empty($_SESSION)) : ?>
       <?php if($_SESSION['rol'] == "Developer" || $_SESSION['rol'] == "Projectleider" || $_SESSION['rol'] == "Begeleider") : ?>
         <li><a href="beheer_recepten.php">Beheer Recepten</a></li>

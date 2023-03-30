@@ -53,10 +53,19 @@ require 'database.php';
             <input type="text" name="beschrijving" id="beschrijving" value="<?php echo $eigen_recept['beschrijving']?>">
             <input type="text" name="tijdsduur" id="tijdsduur" value="<?php echo $eigen_recept['tijdsduur']?>">
             <input type="text" name="menugang" id="menugang" value="<?php echo $eigen_recept['menugang']?>">
-            <input type="text" name="moeilijksheidgraad" id="moeilijksheidgraad" value="<?php echo $eigen_recept['moeilijksheidgraad']?>">
+            <select id="moeilijksheidgraad" name="moeilijksheidgraad">
+                <option value="1">Heel Makkelijk</option>
+                <option value="2">Eenvoudig</option>
+                <option value="3">Gemiddeld</option> 
+                <option value="4">Uitdagend</option> 
+                <option value="5">Moeilijk</option> 
+            </select><br>
             <button type="submit" name="submitButton">Update!</button>
         <?php endforeach; ?>
+        <h1 class="text-white">ingredient toevoegen? klik hieronder!</h1>
+        <a href="aanmaken_ingredienten.php"><input type="button" value="Ingredienten toevoegen! "></a>
     </form>
+    
 <?php include 'footer.php'; ?>
 </body>
 </html>

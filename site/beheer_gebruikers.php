@@ -28,11 +28,10 @@ $stmt->execute();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>beheer_gebruikers</title>
+    <title>beheer gebruikers</title>
 </head>
 <body>
     <?php include 'header.php'; ?>
-    
     <div class="gebruikers_container">
         <h2 class="submit-button"><a href="aanmaken_gebruiker.php"><button type="submit" class="">Gebruiker Aanmaken</button></a></h2>
         <?php foreach ($gebruikers as $gebruiker) : ?>

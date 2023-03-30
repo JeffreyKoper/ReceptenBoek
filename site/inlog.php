@@ -2,7 +2,7 @@
 require 'database.php';
 
 session_start();
-
+// Checkt of email echt wel een email is.
 if(isset($_POST['email']) && !empty($_POST['email'])){
     $email = $_POST['email'];
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){

@@ -17,7 +17,6 @@ session_start();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    
     <div class="flex-container">
         <div class="flex-item">
             <h2>Welkom!</h2>

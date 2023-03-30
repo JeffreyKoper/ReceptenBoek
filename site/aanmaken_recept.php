@@ -55,14 +55,16 @@ $id = $_SESSION['id'];
     <form action="" method="post" enctype='multipart/form-data'>
             <label for="" class="text-white">Recept Aanmaken</label>
             <input type="text" name="titel" id="titel" placeholder="Naam Gerecht">
-            <input type="text" name="beschrijving" id="beschrijving" placeholder="Recept">
+            <input type="text" name="beschrijving" id="beschrijving" placeholder="Instructies/Beschijving">
             <input type="text" name="tijdsduur" id="tijdsduur" placeholder="Tijdsduur(In min Bijv. 12)">
             <input type="text" name="menugang" id="menugang" placeholder="Menugang">
             <label for="moeilijksheidgraad" class="text-white">Moeilijksheidgraad:</label>
             <select id="moeilijksheidgraad" name="moeilijksheidgraad">
-                <option value="Eenvoudig">Eenvoudig</option>
-                <option value="Gemiddeld">Gemiddeld</option>
-                <option value="Moeilijk">Moeilijk</option> 
+                <option value="1">Heel Makkelijk</option>
+                <option value="2">Eenvoudig</option>
+                <option value="3">Gemiddeld</option> 
+                <option value="4">Uitdagend</option> 
+                <option value="5">Moeilijk</option> 
             </select><br>
             <input type='file' name='file' />
             <button type="submit" name="submitButton">Aanmaken!</button>

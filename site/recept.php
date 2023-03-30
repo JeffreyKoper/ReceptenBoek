@@ -5,6 +5,7 @@ session_start();
 
 $id = $_GET['id'];  
 
+// Haalt een specieke recept op met behulp van id
 $sql = "SELECT * FROM `Recepten` WHERE id = :id";
 $stmt = $conn->prepare($sql);
 $stmt->bindParam(':id', $id);
@@ -14,7 +15,7 @@ $stmt->execute();
 $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $recept = $stmt->fetchAll();
 
-
+// veranderd de Ingredient.id zodat ipv id nummers, de naam in beeld krijg.
 $sql = "SELECT * FROM `Recept_Ingredienten`
 JOIN Ingredienten ON Ingredienten.id = `ingredienten.id` WHERE `recept.id` =  :id"
 ;
@@ -61,13 +62,37 @@ $ingredienten = $stmt->fetchAll();
                     <h2>Menugang:</h2>
                     <p><?php echo $receptDetails['menugang'] ?>
                     <h2>moeilijkheidsniveau:</h2>
-                    <p><?php echo $receptDetails['moeilijksheidgraad'] ?>
-                    <?php if(!empty($_SESSION)) : ?>
-                        <?php if($_SESSION['id'] == $receptDetails['gebruiker_id']) : ?>
-                            <h2>Updaten</h2>
-                            <a href="update_recept.php?id=<?php echo $receptDetails["id"] ?>">Update Recept</a></td>
-                        <?php endif; ?>
+                    <p><?php 
+                // met een switch statement komt de juiste moeilijksheidgraad op zijn plek, ipv van een getal.
+                switch ($receptDetails['moeilijksheidgraad']) {
+                    case 1:
+                       echo 'Heel Makkelijk';
+                        break;
+                    case 2:
+                       echo 'Eenvoudig';
+                        break;
+                    case 3:
+                       echo 'Gemiddeld';
+                        break;
+                    case 4:
+                       echo 'Uitdagend';
+                        break;
+                    case 5:
+                       echo 'Moeilijk';
+                        break;
+                    
+                    default:
+                        echo 'geen moeilijkheidsgraad genoteerd';
+                        break;
+                }
+            ?></p>
+                 <!--Checkt of de gebruiker dat ingelogd is, het recept heeft gemaakt. zo ja, dan kan deze gebruiker zijn/haar recept aanpassen -->
+                <?php if(!empty($_SESSION)) : ?>
+                    <?php if($_SESSION['id'] == $receptDetails['gebruiker_id']) : ?>
+                        <h2>Updaten</h2>
+                        <a href="update_recept.php?id=<?php echo $receptDetails["id"] ?>">Update Recept</a></td>
                     <?php endif; ?>
+                <?php endif; ?>
                 <?php endforeach; ?>
             </div>
     </div>

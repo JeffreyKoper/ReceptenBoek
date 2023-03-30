@@ -27,13 +27,14 @@ header {
 .recepten-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 8rem;
 }
 .recepten-items {
-  flex-basis: calc(15% - 20px);
+  flex-basis: calc(24% - 20px);
   margin-bottom: 2px;
   padding: 10px;
+
   border: 1px solid black;
   box-sizing: border-box;
   background-color: white;
@@ -102,6 +103,7 @@ header {
   border-radius: 7px;
   color: #ce0707;
   font-size: 16px;
+  width: 100%;
   font-weight: bold;
   padding: 10px 20px;
   text-align: center;
@@ -167,7 +169,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 75px;
+  margin-top: 150px;
 }
 
 .flex-item {
@@ -249,7 +251,7 @@ form input[type="text"] {
 }
 
 .text-white {
-  color: #fff;
+  color: #ffff;
   font-weight: bold;
 }
 .Aanmaken {
@@ -261,4 +263,44 @@ form input[type="text"] {
   cursor: pointer;
   font-weight: bold;
   height: 2rem;
+}
+.labelvoorSpecial {
+  flex-basis: calc(55% - 20px);
+  margin-bottom: -94px;
+  height: 50%;
+  padding: 10px;
+  border: 10px solid #3c3b6e;
+  box-sizing: border-box;
+  color: black;
+  background-color: #ffffff;
+}
+.specials_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.specials_items {
+  flex-basis: calc(25% - 20px);
+  margin-bottom: 2px;
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: white;
+}
+.eigen_recepten_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.eigen_recepten_items {
+  flex-basis: calc(35% - 20px);
+  margin-bottom: -94px;
+  height: 50%;
+  padding: 10px;
+  border: 10px solid #3c3b6e;
+  box-sizing: border-box;
+  color: black;
+  background-color: #ffffff;
 }

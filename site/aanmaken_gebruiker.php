@@ -31,7 +31,7 @@ if(isset($_POST['firstname'],$_POST['lastname'], $_POST[    'email'], $_POST['pa
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Registreren</title>
+    <title>Gebruiker Aanmaken</title>
 </head>
 <body>
     <?php include 'header.php'; ?>
