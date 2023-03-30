@@ -10,7 +10,7 @@ $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $LangnaarKort = $stmt->fetchAll();
 
-    $stmt = $conn->prepare("SELECT * FROM `Recepten` WHERE moeilijksheidgraad = (SELECT MAX(moeilijksheidgraad) FROM Recepten)");
+    $stmt = $conn->prepare("SELECT * FROM `Recepten` WHERE moeilijksheidgraad = (SELECT MIN(moeilijksheidgraad) FROM Recepten)");
     $stmt->execute();
   
     // set the resulting array to associative
