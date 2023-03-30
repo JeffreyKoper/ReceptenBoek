@@ -22,29 +22,30 @@ $stmt->execute();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    
-    <div class="specials_container">
-        <?php if(empty($recepten)) : ?>
-            <div class="labelvoorSpecial">
-                <h1>U heeft nog geen recepten gemaakt</h1>
-                <a href="aanmaken_recept.php"><button type="submit" class="detail-buttons">Aanmaken</button></a>
+    <main>
+        <div class="specials_container">
+            <?php if(empty($recepten)) : ?>
+                <div class="labelvoorSpecial">
+                    <h1>U heeft nog geen recepten gemaakt</h1>
+                    <a href="aanmaken_recept.php"><button type="submit" class="detail-buttons">Aanmaken</button></a>
+                </div>
+            <?php endif; ?>
+        </div>
+        <?php if(!empty($recepten)) : ?>
+            <div class="eigen_recepten_container">
+                <div class="eigen_recepten_items">
+                    <h1>Uw gemaakte recepten:</h1>
+                </div>
+            </div>
+            <div class="recepten-container">    
+                <?php foreach ($recepten as $mijn_recepten) : ?>
+                <div class="recepten-items">
+                        <h1><?php echo $mijn_recepten['gerecht_naam']?> </h1>
+                        <img height="200px" width="100%" src="Images/<?php echo $mijn_recepten['afbeelding'] ?>" alt="een foto van <?php echo $mijn_recepten['gerecht_naam'] ?>">
+                        <a href="recept.php?id=<?php echo $mijn_recepten["id"] ?>"><button type="submit" class="detail-buttons">Klik hier voor meer details!</button></a>
+                    </div>
+                <?php endforeach; ?>
             </div>
         <?php endif; ?>
-    </div>
-    <?php if(!empty($recepten)) : ?>
-        <div class="eigen_recepten_container">
-            <div class="eigen_recepten_items">
-                <h1>Uw gemaakte recepten:</h1>
-            </div>
-        </div>
-        <div class="recepten-container">    
-            <?php foreach ($recepten as $mijn_recepten) : ?>
-               <div class="recepten-items">
-                    <h1><?php echo $mijn_recepten['gerecht_naam']?> </h1>
-                    <img height="200px" width="100%" src="Images/<?php echo $mijn_recepten['afbeelding'] ?>" alt="een foto van <?php echo $mijn_recepten['gerecht_naam'] ?>">
-                    <a href="recept.php?id=<?php echo $mijn_recepten["id"] ?>"><button type="submit" class="detail-buttons">Klik hier voor meer details!</button></a>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
-    <?php include 'footer.php'; ?>
+    </main>
+<?php include 'footer.php'; ?>

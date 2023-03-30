@@ -39,17 +39,19 @@ $ingredienten = $stmt->fetchAll();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <div class="recepten-container">
-        <div class="verandernaam"> 
-            <form action="" method="post">
-                <?php foreach ($ingredienten as $ingredient ) : ?> 
-                <label for="">Naam ingredient</label>
-                <input type="text" name="naamIngredient" id="naamIngredient" value="<?php echo $ingredient['naam']?>">
-                <button class="detail-buttons" type="submit" name="submitButton">Verander de naam</button> 
-                <?php endforeach; ?>
-            </form>
+    <main>
+        <div class="recepten-container">
+            <div class="verandernaam"> 
+                <form action="" method="post">
+                    <?php foreach ($ingredienten as $ingredient ) : ?> 
+                    <label for="">Naam ingredient</label>
+                    <input type="text" name="naamIngredient" id="naamIngredient" value="<?php echo $ingredient['naam']?>">
+                    <button class="detail-buttons" type="submit" name="submitButton">Verander de naam</button> 
+                    <?php endforeach; ?>
+                </form>
+            </div>
         </div>
-    </div>
+    </main>
     <?php include 'footer.php'; ?>
 </body>
 </html>

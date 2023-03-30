@@ -32,6 +32,7 @@ $stmt->execute();
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <main>
     <div class="gebruikers_container">
         <div>
         <h2><a href="aanmaken_gebruiker.php"><button type="submit" class="detail-buttons">Gebruiker Aanmaken</button></a></h2>
@@ -52,4 +53,7 @@ $stmt->execute();
             </div>
             <?php endforeach; ?>
         </div>
+    </main>
     <?php include 'footer.php'; ?>
+</body>
+</html>

@@ -46,22 +46,23 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
 </head>
 <body>
     <?php include 'header.php'; ?>
-    
-    <div class="inlog-container">
-        <div class="inlog-items">
-            <form method="post">
-                <div class="text-white">
-                    <h2>Inloggen</h2>
-                    <label for="email">Email Address</label>
-                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter Email" name="email">
-                    <label for="Password">Password</label>
-                    <input type="password" class="form-control" id="Password" placeholder="Password" name= "password">
-                    <button type="submit" id="Submit"class="submit-button">Inloggen</button>
-                    <h1>Nog geen account? <a href="registreer.php">Klik hier</a> om een account te maken!</h1>
+    <main>
+        <div class="inlog-container">
+            <div class="inlog-items">
+                <form method="post">
+                    <div class="text-white">
+                        <h2>Inloggen</h2>
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter Email" name="email">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" id="Password" placeholder="Password" name= "password">
+                        <button type="submit" id="Submit"class="submit-button">Inloggen</button>
+                        <h1>Nog geen account? <a href="registreer.php">Klik hier</a> om een account te maken!</h1>
+                    </div>
+                </form>
                 </div>
-            </form>
             </div>
-        </div>
+    </main>
     <?php include 'footer.php'; ?>
 </body>
 </html>

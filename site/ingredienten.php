@@ -19,13 +19,14 @@ $stmt->execute();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    
-    <<div class="ingredienten-container">
-        <?php foreach ($ingredienten as $ingredient) : ?>
-            <div class="ingredienten">
-                <h1><?php echo $ingredient['naam']?> </h1>
-                <a href="ingredient.php?id=<?php echo $ingredient["id"] ?>"><button type="submit" class="detail-buttons">Verander naam</button></a>
-            </div>
-        <?php endforeach; ?>
-    </div>
+    <main>
+        <div class="ingredienten-container">
+            <?php foreach ($ingredienten as $ingredient) : ?>
+                <div class="ingredienten">
+                    <h1><?php echo $ingredient['naam']?> </h1>
+                    <a href="ingredient.php?id=<?php echo $ingredient["id"] ?>"><button type="submit" class="detail-buttons">Verander naam</button></a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </main>
     <?php include 'footer.php'; ?>

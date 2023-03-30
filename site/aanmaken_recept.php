@@ -51,7 +51,7 @@ $id = $_SESSION['id'];
 </head>
 <body>
 <?php include 'header.php'; ?>
-
+<main>
     <form action="" method="post" enctype='multipart/form-data'>
             <label for="" class="text-white">Recept Aanmaken</label>
             <input type="text" name="titel" id="titel" placeholder="Naam Gerecht">
@@ -69,6 +69,7 @@ $id = $_SESSION['id'];
             <input type='file' name='file' />
             <button type="submit" name="submitButton">Aanmaken!</button>
     </form>
+</main>
 <?php include 'footer.php'; ?>
 </body>
 </html>

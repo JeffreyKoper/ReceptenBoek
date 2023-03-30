@@ -45,7 +45,7 @@ require 'database.php';
 </head>
 <body>
 <?php include 'header.php'; ?>
-
+<main>
     <form action="" method="post">
         <?php foreach($recept as $eigen_recept) : ?>
             <label for="" class="text-white">Update Recept</label>
@@ -65,7 +65,7 @@ require 'database.php';
         <h1 class="text-white">ingredient toevoegen? klik hieronder!</h1>
         <a href="aanmaken_ingredienten.php"><input type="button" value="Ingredienten toevoegen! "></a>
     </form>
-    
+    </main>
 <?php include 'footer.php'; ?>
 </body>
 </html>

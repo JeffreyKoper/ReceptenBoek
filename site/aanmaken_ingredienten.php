@@ -51,6 +51,7 @@ $recepten = $stmt->fetchAll();
 </head>
 <body>
 <?php include 'header.php'; ?>
+<main>
     <form action="" method="post">
             <label for="" class="text-white">Ingredienten toevoegen</label>
             <select id="recept" name="recept_id">
@@ -73,7 +74,7 @@ $recepten = $stmt->fetchAll();
             <input type="text" name="nieuwIngredient" id="nieuwIngredient" placeholder="Nieuw ingredient">
             <button type="submit" name="ingredientButton">ingredient Toevoegen!</button>
         </form>
-        
+</main>
 <?php include 'footer.php'; ?>
 </body>
 </html>

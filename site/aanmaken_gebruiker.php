@@ -35,32 +35,34 @@ if(isset($_POST['firstname'],$_POST['lastname'], $_POST[    'email'], $_POST['pa
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <div class="inlog-container">
-        <div class="inlog-items">
-            <form method="post">
-                <div class="text-white">
-                    <h2>Gebruiker Aanmaken</h2>
-                    <label for="firstname">Voornaam</label>
-                    <input type="text" class="form-control" id="firstname" placeholder="Voornaam" name="firstname"> <br><br>
-                    <label for="lastname">Achternaam</label>
-                    <input type="text" class="form-control" id="lastname" placeholder="Achternaam" name="lastname"> <br><br>
-                    <label for="email">Email Adres</label>
-                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter Email" name="email">
-                    <label for="Password">Wachtwoord</label>
-                    <input type="password" class="form-control" id="Password" placeholder="Wachtwoord" name= "password">
-                    <label for="geslacht">Geslacht</label>
-                    <select id="geslacht" name="geslacht">
-                        <option value="man">Man</option>
-                        <option value="vrouw">Vrouw</option>
-                        <option value="overige">overige</option>
-                    </select><br><br>
-                    <label for="Rol">Rol</label>
-                    <input type="text" class="form-control" id="rol" value="Gebruiker" placeholder="Rol in onze website" name= "rol"><br> <br>
-                    <button type="submit" id="Submit"class="submit-button">Registeren</button>
+    <main>
+        <div class="inlog-container">
+            <div class="inlog-items">
+                <form method="post">
+                    <div class="text-white">
+                        <h2>Gebruiker Aanmaken</h2>
+                        <label for="firstname">Voornaam</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Voornaam" name="firstname"> <br><br>
+                        <label for="lastname">Achternaam</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Achternaam" name="lastname"> <br><br>
+                        <label for="email">Email Adres</label>
+                        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter Email" name="email">
+                        <label for="Password">Wachtwoord</label>
+                        <input type="password" class="form-control" id="Password" placeholder="Wachtwoord" name= "password">
+                        <label for="geslacht">Geslacht</label>
+                        <select id="geslacht" name="geslacht">
+                            <option value="man">Man</option>
+                            <option value="vrouw">Vrouw</option>
+                            <option value="overige">overige</option>
+                        </select><br><br>
+                        <label for="Rol">Rol</label>
+                        <input type="text" class="form-control" id="rol" value="Gebruiker" placeholder="Rol in onze website" name= "rol"><br> <br>
+                        <button type="submit" id="Submit"class="submit-button">Registeren</button>
+                    </div>
+                </form>
                 </div>
-            </form>
             </div>
-        </div>
-    <?php include 'footer.php'; ?>
+    </main>
+<?php include 'footer.php'; ?>
 </body>
 </html>

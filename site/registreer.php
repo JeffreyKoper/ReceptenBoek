@@ -33,7 +33,7 @@ if(isset($_POST['firstname'],$_POST['lastname'], $_POST[    'email'], $_POST['pa
 </head>
 <body>
     <?php include 'header.php'; ?>
-    
+    <main>
     <div class="inlog-container">
         <div class="inlog-items">
             <form method="post">
@@ -59,6 +59,7 @@ if(isset($_POST['firstname'],$_POST['lastname'], $_POST[    'email'], $_POST['pa
             </form>
             </div>
         </div>
+    </main>
     <?php include 'footer.php'; ?>
 </body>
 </html>
