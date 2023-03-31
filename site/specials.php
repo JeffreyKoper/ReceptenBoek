@@ -39,7 +39,7 @@ $stmt->execute();
     <main>
         <div class="specials_container">
             <div class="labelvoorSpecial">
-                <h1 class="">Langstdurende recept(en):</h1>
+                <h1 class="">Recept(en) met de langste bereidingstijd:</h1>
             </div>
         </div>
         <div class="specials_container">
